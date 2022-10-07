@@ -44,13 +44,13 @@ class InscriptionPage extends StatelessWidget{
                   },
                   child: Text('Inscription',style: TextStyle(fontSize: 22))),
                 ),
-                // TextButton(
-                //   child: Text("j'ai deja un compte",
-                //   style: TextStyle(fontSize: 22)),
-                //   onPressed: (() {
-                //     Navigator.pop(context);
-                //     Navigator.pushNamed(context, '/authentification');
-                //   }))          
+                TextButton(
+                  child: Text("j'ai deja un compte",
+                  style: TextStyle(fontSize: 22)),
+                  onPressed: (() {
+                    Navigator.pop(context);
+                    Navigator.pushNamed(context, '/authentification');
+                  }))          
         ],  
         ) );
     
