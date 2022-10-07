@@ -62,6 +62,7 @@ class InscriptionPage extends StatelessWidget{
     if(!txt_login.text.isEmpty && !txt_password.text.isEmpty){
       prefs.setString("login",txt_login.text);
       prefs.setString("password",txt_password.text);
+      prefs.setBool("coonect", true);
       Navigator.pop(context);
       Navigator.pushNamed(context, '/home');
 

@@ -63,6 +63,7 @@ class AuthentificationPage extends StatelessWidget {
     String psw= prefs.getString("password")??'';
     print(txt_password.text);
     if(txt_login.text== log && txt_password.text==psw){
+      prefs.setBool("connect", true);
       Navigator.pop(context);
       Navigator.pushNamed(context, '/home');
 
