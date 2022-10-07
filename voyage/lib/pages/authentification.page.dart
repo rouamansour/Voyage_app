@@ -66,6 +66,11 @@ class AuthentificationPage extends StatelessWidget {
       Navigator.pop(context);
       Navigator.pushNamed(context, '/home');
 
+    }else{
+      const snackBar=SnackBar(
+        content: Text('verifier votre Id et mot de passe '),
+        );
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);
     }
   }
 }

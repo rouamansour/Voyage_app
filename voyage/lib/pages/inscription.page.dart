@@ -65,6 +65,11 @@ class InscriptionPage extends StatelessWidget{
       Navigator.pop(context);
       Navigator.pushNamed(context, '/home');
 
+    }else{
+      const snackBar=SnackBar(
+        content: Text('Id ou mot de passe vides'),
+        );
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);
     }
   }
 }
