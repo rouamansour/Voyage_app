@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-
+import 'package:shared_preferences/shared_preferences.dart';
 class AuthentificationPage extends StatelessWidget {
   // constructor
   // const AuthentificationPage({Key? key}) : super(key: key);
+  late SharedPreferences prefs;
   TextEditingController txt_login=new TextEditingController();
   TextEditingController txt_password=new TextEditingController();
   @override
@@ -41,7 +42,9 @@ class AuthentificationPage extends StatelessWidget {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size.fromHeight(50)),
-                  onPressed: () {},
+                  onPressed: () {
+                    _onAuthentifier(context);
+                  },
                   child: Text('Connexion',style: TextStyle(fontSize: 22))),
                 ),
                TextButton(
@@ -53,5 +56,16 @@ class AuthentificationPage extends StatelessWidget {
                   })) 
         ],
         ));
+  }
+  Future<void> _onAuthentifier(BuildContext context)async{
+    prefs=await SharedPreferences.getInstance();
+    String log= prefs.getString("login")??'';
+    String psw= prefs.getString("password")??'';
+    print(txt_password.text);
+    if(txt_login.text== log && txt_password.text==psw){
+      Navigator.pop(context);
+      Navigator.pushNamed(context, '/home');
+
+    }
   }
 }
