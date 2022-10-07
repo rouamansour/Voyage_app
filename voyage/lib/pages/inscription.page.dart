@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 class InscriptionPage extends StatelessWidget{
   // const InscriptionPage({Key? key}): super(key:key);
+  late SharedPreferences prefs;
   TextEditingController txt_login=new TextEditingController();
   TextEditingController txt_password=new TextEditingController();
   @override
@@ -40,7 +42,7 @@ class InscriptionPage extends StatelessWidget{
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size.fromHeight(50)),
                   onPressed: () {
-                    // _onInscrire(context);
+                    _onInscrire(context);
                   },
                   child: Text('Inscription',style: TextStyle(fontSize: 22))),
                 ),
@@ -54,5 +56,15 @@ class InscriptionPage extends StatelessWidget{
         ],  
         ) );
     
+  }
+  Future<void> _onInscrire(BuildContext context)async{
+    prefs=await SharedPreferences.getInstance();
+    if(!txt_login.text.isEmpty && !txt_password.text.isEmpty){
+      prefs.setString("login",txt_login.text);
+      prefs.setString("password",txt_password.text);
+      Navigator.pop(context);
+      Navigator.pushNamed(context, '/home');
+
+    }
   }
 }
