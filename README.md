@@ -21,6 +21,7 @@ create new compte :
 
 verify your name and password :
 
+
 ![image](https://user-images.githubusercontent.com/73079423/194529998-4e0e990e-84cd-4227-92d7-22e902af8da4.png)
 
 Logout:
@@ -28,6 +29,4 @@ Logout:
 ![image](https://user-images.githubusercontent.com/73079423/194530643-24cae531-3a3b-4776-8197-5643000bc54e.png)
 
 
-
-
-
+![image](https://user-images.githubusercontent.com/73079423/195544709-32c0e37a-c829-412b-8463-aa5d3957c85c.png)
