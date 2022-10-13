@@ -7,6 +7,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        drawer:MyDrawer(),
         appBar: AppBar(title: Text('Page Home')),
         body: Center(
             child: Container(
@@ -26,5 +27,24 @@ class HomePage extends StatelessWidget {
     prefs.setBool("connect", false);
     Navigator.pop(context);
     Navigator.pushNamed(context, '/authentification');
+  }
+}
+class MyDrawer extends StatelessWidget{
+  const MyDrawer({Key? key}): super(key:key);
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      child: ListView(
+        children: [
+          DrawerHeader(
+            decoration: BoxDecoration(
+                  gradient: LinearGradient(colors: [Colors.white,Colors.blue])),
+                  child: Center(
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage("images/profile.jpg"),
+                    ),
+                  ))
+        ],
+      ));
   }
 }
