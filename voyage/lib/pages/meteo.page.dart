@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../menu/drawer.widget.dart';
+import 'meteo_details.page.dart';
 
 class MeteoPage extends StatelessWidget{
   TextEditingController txt_ville = new TextEditingController();
@@ -26,11 +26,22 @@ class MeteoPage extends StatelessWidget{
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
               minimumSize: const Size.fromHeight(50)),
-              onPressed: (){},
+              onPressed: ()
+              {
+                _onGetMeteoDetails(context);
+              },
               child: Text('Chercher', style: TextStyle(fontSize: 22))),
               ),
           ],
     ));
   }
 
+void _onGetMeteoDetails(BuildContext context){
+    String v = txt_ville.text;
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+          builder: (context) => MeteoDetailsPage(v)));
+    txt_ville.text=""; 
 }
+ }
