@@ -61,6 +61,12 @@ flutter:
     uses-material-design: true
     assets:
       - images/profile.jpg 
+      - images/deconnexion.png
+      - images/parametres.png
+      - images/contact.png
+      - images/pays.png
+      - images/gallerie.png
+      - images/meteo.png
 
 
 
