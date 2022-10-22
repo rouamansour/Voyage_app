@@ -30,6 +30,8 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   shared_preferences:
+  intl:
+  http:
   flutter:
     sdk: flutter
 
@@ -67,6 +69,11 @@ flutter:
       - images/pays.png
       - images/gallerie.png
       - images/meteo.png
+      - images/clear.png
+      - images/clouds.png
+      - images/rain.png
+      - images/snow.png
+
 
 
 
