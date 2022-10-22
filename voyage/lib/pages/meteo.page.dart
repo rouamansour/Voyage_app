@@ -41,7 +41,7 @@ void _onGetMeteoDetails(BuildContext context){
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => MeteoDetailsPage(v)));
+          builder: (context) => MeteoDetailspage(v)));
     txt_ville.text=""; 
 }
  }
