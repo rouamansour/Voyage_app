@@ -30,3 +30,12 @@ Logout:
 
 
 ![image](https://user-images.githubusercontent.com/73079423/195544709-32c0e37a-c829-412b-8463-aa5d3957c85c.png)
+
+![image](https://user-images.githubusercontent.com/73079423/197361993-e28b8661-3e5a-4e2c-9d37-0ebd3d5439ee.png)
+
+
+![image](https://user-images.githubusercontent.com/73079423/197361999-0c0b4489-60ed-467b-8f30-9c310bc6df44.png)
+
+
+![image](https://user-images.githubusercontent.com/73079423/197362016-37f34424-0afa-4272-908a-4d63486c9f8e.png)
+
